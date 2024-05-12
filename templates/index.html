@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitter Crawl</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        /* Tambahkan gaya untuk teks di bawah form */
+        .by-line {
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Twitter Crawl</h1>
+        <form action="/crawl" method="post">
+            <label for="username">Username Twitter:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="start_date">Tanggal Mulai:</label>
+            <input type="date" id="start_date" name="start_date" required><br><br>
+            <label for="end_date">Tanggal Selesai:</label>
+            <input type="date" id="end_date" name="end_date" required><br><br>
+            <label for="token">Token API Twitter:</label>
+            <input type="text" id="token" name="token" required><br><br>
+            <input type="submit" value="Crawl">
+        </form>
+        <!-- Tambahkan teks "by Fernanda Sugiwa" di bawah form -->
+        <div class="by-line">by Fernanda Sugiwa</div>
+    </div>
+</body>
+</html>
